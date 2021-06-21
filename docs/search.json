@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T14:26:54-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Home Field Advantage Across Sports",
+      "description": "This is where the description will go. \n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T14:26:54-05:00"
+    }
+  ],
+  "collections": []
+}

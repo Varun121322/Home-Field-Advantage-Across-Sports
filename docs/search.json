@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\nAbout Me\r\nThis is where I will write a short description about myself\r\nAbout The Project\r\nThis is where I will describe the project in length\r\nGoals\r\nGoal 1: To make something cool in R\r\nA complication of this could be ….\r\n“This is data science”\r\nPreceptor Kane’s Free High School Data Science Bootcamp\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-21T14:45:10-05:00"
+      "last_modified": "2021-06-21T14:58:55-05:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,44 @@
       "description": "This is where the description will go. \n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-21T14:45:12-05:00"
+      "last_modified": "2021-06-21T14:58:57-05:00"
+    },
+    {
+      "path": "nbaSource.html",
+      "title": "NBA Source Data",
+      "description": "NBA Data Source\n",
+      "author": [
+        {
+          "name": "Varun Mittal",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T14:58:58-05:00"
+    },
+    {
+      "path": "nflSource.html",
+      "title": "NFL Data Source",
+      "description": "NFL Data DSource Description\n",
+      "author": [
+        {
+          "name": "Varun Mittal",
+          "url": {}
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T14:58:58-05:00"
+    },
+    {
+      "path": "sources.html",
+      "title": "Sources",
+      "description": "An overview of the sources used in my project.\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nThis is where I will describe what sources I used and why I chose them. I may also discuss any broad challenges I faced while finding sources. Distill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T14:58:59-05:00"
     }
   ],
   "collections": []

@@ -9,4 +9,10 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Sources"
+      menu:
+        - text: "NBA Data Source"
+          href: nbaSource.html
+        - text: "NFL Data Source"
+          href: nflSource.html
 output: distill::distill_article

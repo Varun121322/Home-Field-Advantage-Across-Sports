@@ -5,16 +5,16 @@
       "title": "About this site",
       "description": "Some additional details about the website",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-21T14:26:54-05:00"
+      "contents": "\r\nAbout Me\r\nThis is where I will write a short description about myself\r\nAbout The Project\r\nThis is where I will describe the project in length\r\nGoals\r\nGoal 1: To make something cool in R\r\nA complication of this could be ….\r\n“This is data science”\r\nPreceptor Kane’s Free High School Data Science Bootcamp\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T14:45:10-05:00"
     },
     {
       "path": "index.html",
       "title": "Home Field Advantage Across Sports",
       "description": "This is where the description will go. \n",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-21T14:26:54-05:00"
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-21T14:45:12-05:00"
     }
   ],
   "collections": []

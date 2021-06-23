@@ -1,0 +1,50 @@
+---
+title: "NFL Examination"
+description: |
+  A new article created using the Distill format.
+author:
+  - name: Varun Mittal
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(primer.data)
+library(lubridate)
+library(dbplyr)
+library(janitor)
+library(skimr)
+library(ggthemes)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web. 
+
+Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+
+```{r nflExam}
+# Reading in the CSV file
+raw_data_nfl <- read_csv("spreadspoke_scores.csv")
+
+# Filtering the data to include only the data where the home team won and the season was after 1990.
+# I did this restriction because 1990 was the last time where the playoff format was modified. 
+clean_data_nfl <- raw_data_nfl %>%
+  filter(score_home > score_away & schedule_season > 2010) %>% 
+  group_by(schedule_season) %>% 
+  summarise(total = n())
+# Plotting the data
+ggplot(clean_data_nfl, aes(x = schedule_season, y = total)) +
+geom_col(fill = if_else(clean_data_nfl$schedule_season == 2020, "red", "blue")) +
+labs(title = "NFL Home Court Advantage Analysis",
+     subtitle = "The amount of home victories in 2020 (COVID year) was lower than most years, but \n wasn't significantly lower than past years.",
+     x = "Season",
+     y = "Total Games Won By Home Team",
+     caption = "Source: Spreadspoke (2021)") +
+theme_economist() +
+scale_x_continuous(breaks = 2010:2020) 
+```
+
+
+
+

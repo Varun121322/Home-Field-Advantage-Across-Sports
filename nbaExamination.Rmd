@@ -1,0 +1,48 @@
+---
+title: "Home Court Advantage Across The NBA"
+description: |
+  Decribe NBA Exam
+author:
+  - name: Varun Mittal
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(primer.data)
+library(lubridate)
+library(dbplyr)
+library(janitor)
+library(skimr)
+library(ggthemes)
+```
+
+```{r nbaexam}
+raw_data_nba <- read_csv("games.csv") 
+
+clean_data_nba <- raw_data_nba %>% 
+  filter(PTS_home > PTS_away & SEASON > 2010) %>% 
+  group_by(SEASON) %>% 
+  summarise(total = n()) 
+
+ggplot(clean_data_nba, aes(x = SEASON, y = total)) +
+geom_col(fill = if_else(clean_data_nba$SEASON == 2020, "red", "blue")) +
+labs(title = "NBA Home Court Advantage Analysis",
+      subtitle = "2020 did have a significant drop in the amount of games that the home team won, but \n wasn't strikingly low compared to past years.",
+      x = "Season",
+      y = "Total Games Won By Home Team",
+      caption = "Source: Nathan Lauga, Kaggle (2021)") + 
+scale_x_continuous(breaks = 2010:2020) +
+theme_economist()
+```
+
+Distill is a publication format for scientific and technical writing, native to the web. 
+
+Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+
+
+
+
+

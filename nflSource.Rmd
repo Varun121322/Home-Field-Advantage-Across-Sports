@@ -1,7 +1,7 @@
 ---
 title: "NFL Data Source"
 description: |
-  NFL Data DSource Description
+  Kaggle provided the data possible for this project
 author:
   - name: Varun Mittal
 date: "`r Sys.Date()`"

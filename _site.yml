@@ -9,6 +9,10 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "NBA Examination"
+      href: nbaExamination.html
+    - text: "NFL Examination"
+      href: nflExamination.html
     - text: "Sources"
       menu:
         - text: "NBA Data Source"

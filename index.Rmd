@@ -1,7 +1,10 @@
 ---
 title: "Home Field Advantage Across Sports"
-description: |
-  This is where the description will go. 
+description: "An overview of how home-court advantage changed over COVID. Obviously,
+  home-court advantage is significant across sports, but as a result of COVID-19,
+  stadiums went from packed to empty. As varies methods such as virtual fans and recorded
+  noise were attempted, was it able to replicate the advantage? This anaylisys covers
+  this measured in the number of games the home team won, compared to the last decade."
 site: distill::distill_website
 ---
 
@@ -13,6 +16,7 @@ library(lubridate)
 library(dbplyr)
 library(janitor)
 library(skimr)
+library(ggthemes)
 
 # Learn more about creating websites with Distill at:
 # https://rstudio.github.io/distill/website.html
@@ -22,9 +26,8 @@ library(skimr)
 
 ```
 
-```{r nbaExam}
 
-```
+
 
 
 

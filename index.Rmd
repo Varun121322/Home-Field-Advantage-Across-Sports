@@ -25,7 +25,10 @@ library(ggthemes)
 # https://rstudio.github.io/distill/publish_website.html#github-pages
 
 ```
+[NBA Home Court Advantage Analysis](nbaExamination.html)
 
+
+[NFL Home Court Advantage Analysis](nflExamination.html)
 
 
 

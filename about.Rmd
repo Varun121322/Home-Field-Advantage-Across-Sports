@@ -1,20 +1,23 @@
 ---
-title: "About this site"
-description: |
-  Some additional details about the website
+title: "About"
+
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+## Project Background and Motivation
+I've always been interested in sports, whether it's been watching them or playing them. Therefore, it was only natural for me to explore the statistics surrounding sports! Obviously, Covid-19 has been a significant event, but I wanted to look at in terms of how it impacted sports, and I realized that Covid-19 meant that stadiums weren't allowing spectators.
+
+So, I explored whether that actually impacted the supposed "Home Court Advantage" that many people believe, based on how many games the home team won in 2020, compared to each year in the last decade.
+
+I actually made some interesting discoveries, such that while there was a drop off for the games won in the NBA, the NFL home games won decreased, but not to an alarming amount. 
+
 ## About Me
-This is where I will write a short description about myself
+Hello World! My name is Varun Mittal and I am a rising junior at James B. Conant High School. I'm passionate about utilizing the basics of R that I learned from this boot camp to continue to explore sports trends and statistical information!
 
-## About The Project
-This is where I will describe the project in length
+## My Data
+I've compiled and cleaned datasets for my analysis. All my sources are accessible below.
 
-### Goals
-* Goal 1: To make something cool in R 
-  + A complication of this could be ....
-  + "This is data science"
-  ~ - Preceptor
-[Kane's Free High School Data Science Bootcamp](https://bootcamp.davidkane.info/)
+[NBA Information](https://www.kaggle.com/nathanlauga/nba-games)
+
+[NFL Information](https://www.kaggle.com/tobycrabtree/nfl-scores-and-betting-data)

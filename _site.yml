@@ -7,8 +7,6 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
     - text: "NBA Examination"
       href: nbaExamination.html
     - text: "NFL Examination"
@@ -19,4 +17,6 @@ navbar:
           href: nbaSource.html
         - text: "NFL Data Source"
           href: nflSource.html
+    - text: "About"
+      href: about.html
 output: distill::distill_article

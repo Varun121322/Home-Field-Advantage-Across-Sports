@@ -1,7 +1,7 @@
 ---
 title: "NFL Examination"
 description: |
-  A new article created using the Distill format.
+  Home-field is percieved to be everything in the NFL. Fans of the home team dedicate everything they have to help their team to victory. The Seattle Seahawks even call their fans the \"twelth man\", a reference to an additional person that gets added to the 11 that play on the field. However, the advent of COVID-19 resulted in limited fan capacity, which meant a lack of an impact they could make. But did this actually alter the amount of games that the home team won?
 author:
   - name: Varun Mittal
 date: "`r Sys.Date()`"
@@ -19,9 +19,6 @@ library(skimr)
 library(ggthemes)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
-
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
 
 ```{r nflExam}
 # Reading in the CSV file
@@ -30,12 +27,13 @@ raw_data_nfl <- read_csv("spreadspoke_scores.csv")
 # Filtering the data to include only the data where the home team won and the season was after 1990.
 # I did this restriction because 1990 was the last time where the playoff format was modified. 
 clean_data_nfl <- raw_data_nfl %>%
-  filter(score_home > score_away & schedule_season > 2010) %>% 
+  filter(score_home > score_away & schedule_season > 2009) %>% 
   group_by(schedule_season) %>% 
   summarise(total = n())
 # Plotting the data
 ggplot(clean_data_nfl, aes(x = schedule_season, y = total)) +
 geom_col(fill = if_else(clean_data_nfl$schedule_season == 2020, "red", "blue")) +
+  geom_smooth() +
 labs(title = "NFL Home Court Advantage Analysis",
      subtitle = "The amount of home victories in 2020 (COVID year) was lower than most years, but \n wasn't significantly lower than past years.",
      x = "Season",
@@ -45,6 +43,31 @@ theme_economist() +
 scale_x_continuous(breaks = 2010:2020) 
 ```
 
+The 2020 season was different across all sports, but how was it different for the NFL? The graph shows that while the amount of games the home team won was lower than most years, it wasn't an outlier or significantly lower. After all this makes sense, as home-field advantage, at the end of the day, only holds so much of an impact over the game. The few exceptions might be in game-winning field goals or in false start scenarios, but these events don't happen that frequently. After all the best team wins more often than not, so it's safe to conclude that the reduction of home-field advantage didn't alter significantly the amount the home team won. However, one of the greatest strengths of having fans is being able to bother the visiting defense. How were defenses impacted? 
 
 
+```{r nflExamDefense}
+# Reading in the CSV file
+raw_data_nfl_defense <- read_csv("spreadspoke_scores.csv")
+# Cleaning the data, by filtering for seasons 2010 and after, and utilizing group_by and summarize to get the amount of points (using the sum function) that the away team scored over the course of the whole season.
+clean_data_nfl_defense <- raw_data_nfl_defense %>% 
+  filter(schedule_season > 2009) %>%
+  group_by(schedule_season) %>% 
+  summarise(total = sum(score_away)) %>% 
+  slice(1:11) 
+
+# Plotting the data
+ggplot(clean_data_nfl_defense, aes(x = schedule_season, y = total)) +
+geom_col(fill = if_else(clean_data_nfl$schedule_season == 2020, "red", "blue")) +
+  geom_smooth() +
+  labs(title = "NFL Total Number of Points Scored By Visiting Teams Per Season",
+       subtitle = "2020 saw a significant increase in points scored compared to past years",
+       x = "Season",
+       y = "Total Number of Points Scored By Visiting Team",
+       caption = "Source: Spreadspoke (2021)") +
+  theme_economist() +
+  scale_x_continuous(breaks = 2010:2020)
+
+```
+The graph depicts a large increase in the amount of points that the visiting team has scored over the course in a season, compared to the amount in each of the seasons since the last decade. This clearly indicates that yes, the lack of fans played a small part because fans do their best to make so much noise to disrupt the visiting offense that, in a year without fans, the visiting team was able to score more points comparitavely in 2020. However, a larger factor to take into account is the evolution of NFL offenses, that allows them to overcome defenses, not just the fans disrupting the offense. The advent of trick plays (such as Mitchell Trubisky completing a pass to Bradley Sowell or Wide Receivers throwing to QB's) has made NFL offense's more versatile than ever before, allowing for more scoring, and in the end, more fun for the fans! 
 

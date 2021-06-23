@@ -1,21 +1,18 @@
 ---
 title: "NBA Source Data"
 description: |
-  NBA Data Source
+  This data was put together by Nathan Lauga, who himself used NBA Stats and Information.
 author:
   - name: Varun Mittal
 date: "`r Sys.Date()`"
-output: distill::distill_article
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
-
+This project was made possible due to [Nathan Lauga](https://www.kaggle.com/nathanlauga/nba-games) providing the invaluable data that he compiled from NBA Stats and Information.  
 
 
 

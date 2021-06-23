@@ -1,7 +1,7 @@
 ---
 title: "NFL Data Source"
 description: |
-  Kaggle provided the data possible for this project
+  This data was put together by Spreadspoke, which itself used alot of sources that included ESPN, PFR (Pro Football Reference, and NFL Stats and Information).
 author:
   - name: Varun Mittal
 date: "`r Sys.Date()`"
@@ -10,11 +10,17 @@ output: distill::distill_article
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(primer.data)
+library(lubridate)
+library(dbplyr)
+library(janitor)
+library(skimr)
+library(ggthemes)
+library(distill)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
-
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+This data was made accessible thanks to [Spreadspoke](https://www.kaggle.com/tobycrabtree/nfl-scores-and-betting-data) who put together this data set from a variety of sources including: Pro Football Reference, ESPN, and NFL Stats and Information.
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Home Court Advantage Across The NBA"
 description: |
-  Decribe NBA Exam
+  Home-Court Advantage is sacred to all teams in the NBA. This is why in the playoffs, the higher-seeds play more games at home, because the support of their fans combined with the oppression the fans supply to the visitors makes winning a daunting task for the road team. However, COVID-19 resulted in stadiums going from packed to empty, but did that hurt the home team?
 author:
   - name: Varun Mittal
 date: "`r Sys.Date()`"
@@ -20,29 +20,51 @@ library(ggthemes)
 ```
 
 ```{r nbaexam}
+# Reading in CSV file
 raw_data_nba <- read_csv("games.csv") 
 
+# Cleaning the data, by first filtering out all the games to only include the ones 2010 and after that the home team won, and than using group_by() and summarise() to organize this information into a tibble for plotting
 clean_data_nba <- raw_data_nba %>% 
-  filter(PTS_home > PTS_away & SEASON > 2010) %>% 
+  filter(PTS_home > PTS_away & SEASON > 2009) %>% 
   group_by(SEASON) %>% 
   summarise(total = n()) 
-
+# Plotting the data
 ggplot(clean_data_nba, aes(x = SEASON, y = total)) +
-geom_col(fill = if_else(clean_data_nba$SEASON == 2020, "red", "blue")) +
+geom_col(fill = if_else(clean_data_nba$SEASON > 2018, "red", "blue")) +
+  geom_smooth() +
 labs(title = "NBA Home Court Advantage Analysis",
-      subtitle = "2020 did have a significant drop in the amount of games that the home team won, but \n wasn't strikingly low compared to past years.",
+      subtitle = "2019 and 2020 had a strikingly low drop compared to past years.",
       x = "Season",
       y = "Total Games Won By Home Team",
-      caption = "Source: Nathan Lauga, Kaggle (2021)") + 
+      caption = "Source: NBA Stats (2021)") + 
 scale_x_continuous(breaks = 2010:2020) +
 theme_economist()
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web. 
+2019 and 2020 had a much, much, much lower amount of games that were won by the home-teams, which signifies that yes some home-court advantage was lost. However, it would be naive to just chalk it up to that. With the NBA in the past few years, the formation of super teams, being the norm can certainly factor into this loss of wins at home. Also, it could be a matter of road teams simply playing and being better than the home side. Nonetheless, this stark difference in the amount of wins at home is indicative of the fact, that maybe, just maybe, home sides are more dependent on their fans than one might think- and maybe even vulnerable without them. 
 
-Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+```{r nbaFreeThrow}
+# Reading in the CSV File
+raw_data_nba_free_throw <- read_csv("games.csv")
+# Cleaning the data, first by filtering to only the 2010 season and beyond. Than, grouping by each season and summarizing to calculate the average free throw percentage for the away team in each game over the course of a season
+clean_data_nba_free_throw <- raw_data_nba_free_throw %>% 
+  filter(SEASON > 2009) %>% 
+  group_by(SEASON) %>% 
+  summarise(total = mean(FT_PCT_away))
+# Plotting the data
+ggplot(clean_data_nba_free_throw, aes(x = SEASON, y = total)) +
+  geom_col(fill = if_else(clean_data_nba$SEASON > 2018, "red", "blue")) +
+  geom_smooth(color = "yellow") +
+    labs(title = "Free Throw Discrepancy Without Fans Due to Covid",
+         subtitle = "There was no significant difference in average free throw percantage in Covid years",
+         x = "Season",
+         y = "Average Visiting Team Free-Throw Percentage",
+         caption = "Source: NBA (2021)") +
+    scale_x_continuous(breaks = 2010:2020) +
+  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.1), labels = scales::percent_format()) +
+    theme_economist()
+  
+```
 
-
-
-
+There is really no significant difference in free throw percentages for Covid years, despite the absence of an audience. Therefore, to put it bluntly, audiences have little to no impact on the outcomes of free throws! Sorry to disappoint you, but your wasting your energy, save it for the 4th quarter. However, this raises the question of why don't crowds impact free throw shooters? The answer to this lies in the ability of NBA players being accustomed to crowd noise, and being able to tune that noise out. So, yes fans, your noise isn't distracting for free-throw shooters. Also, this renders gimmicks such as balloons, towel waving, kazoos, pretty much insignificant. So fans if I were you, I'd save my energy for the fourth quarter. 
 

@@ -53,7 +53,7 @@ clean_data_nba_free_throw <- raw_data_nba_free_throw %>%
   summarise(total = mean(FT_PCT_away))
 # Plotting the data
 ggplot(clean_data_nba_free_throw, aes(x = SEASON, y = total)) +
-  geom_col(fill = if_else(clean_data_nba$SEASON > 2018, "red", "blue")) +
+  geom_col(fill = if_else(clean_data_nba_free_throw$SEASON > 2018, "red", "blue")) +
   geom_smooth(color = "yellow") +
     labs(title = "Free Throw Discrepancy Without Fans Due to Covid",
          subtitle = "There was no significant difference in average free throw percantage in Covid years",

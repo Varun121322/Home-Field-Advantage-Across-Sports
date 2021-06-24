@@ -4,8 +4,8 @@
       "path": "about.html",
       "title": "About",
       "author": [],
-      "contents": "\r\nProject Background and Motivation\r\nI’ve always been interested in Sports, whether it’s been watching them or playing them. Therefore, it was only natural for me to explore the statistics surrounding sports! Obviously, Covid-19 has been a significant event, but I wanted to look at in terms of how it impacted sports, and I realized that Covid-19 meant that stadiums weren’t allowing spectators.\r\nSo, I explored whether that actually impacted the supposed “Home Court Advantage” that many people believe, based on how many games the home team won in 2020, compared to each year in the last decade.\r\nI actually made some interesting discoveries, such that while there was a drop off for the games won in the NBA, the NFL home games won decreased, but not to an alarming amount.\r\nAbout Me\r\nHello World! My name is Varun Mittal and I am a rising junior at James B. Conant High School. I’m passionate about utilizing the basics of R that I learned from this boot camp to continue to explore sports trends and statistical information!\r\nMy Data\r\nI’ve compiled and cleaned datasets for my analysis. All my sources are accessible below.\r\nNBA Information\r\nNFL Information\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T18:18:17-05:00"
+      "contents": "\r\nProject Background and Motivation\r\nI’ve always been interested in sports, whether it’s been watching them or playing them. Therefore, it was only natural for me to explore the statistics surrounding sports! Obviously, Covid-19 has been a significant event, but I wanted to look at in terms of how it impacted sports, and I realized that Covid-19 meant that stadiums weren’t allowing spectators.\r\nSo, I explored whether that actually impacted the supposed “Home Court Advantage” that many people believe, based on how many games the home team won in 2020, compared to each year in the last decade.\r\nI actually made some interesting discoveries, such that while there was a drop off for the games won in the NBA, the NFL home games won decreased, but not to an alarming amount.\r\nAbout Me\r\nHello World! My name is Varun Mittal and I am a rising junior at James B. Conant High School. I’m passionate about utilizing the basics of R that I learned from this boot camp to continue to explore sports trends and statistical information!\r\nMy Data\r\nI’ve compiled and cleaned datasets for my analysis. All my sources are accessible below.\r\nNBA Information\r\nNFL Information\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-23T19:04:50-05:00"
     },
     {
       "path": "index.html",
@@ -13,7 +13,7 @@
       "description": "An overview of how home-court advantage changed over COVID. Obviously, home-court advantage is significant across sports, but as a result of COVID-19, stadiums went from packed to empty. As varies methods such as virtual fans and recorded noise were attempted, was it able to replicate the advantage? This anaylisys covers this measured in the number of games the home team won, compared to the last decade.",
       "author": [],
       "contents": "\r\nNBA Home Court Advantage Analysis\r\nNFL Home Court Advantage Analysis\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T18:18:20-05:00"
+      "last_modified": "2021-06-23T19:11:53-05:00"
     },
     {
       "path": "nbaExamination.html",
@@ -27,12 +27,12 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\n\r\n\r\n\r\n2019 and 2020 had a much, much, much lower amount of games that were won by the home-teams, which signifies that yes some home-court advantage was lost. However, it would be naive to just chalk it up to that. With the NBA in the past few years, the formation of super teams, being the norm can certainly factor into this loss of wins at home. Also, it could be a matter of road teams simply playing and being better than the home side. Nonetheless, this stark difference in the amount of wins at home is indicative of the fact, that maybe, just maybe, home sides are more dependent on their fans than one might think- and maybe even vulnerable without them.\r\n\r\n\r\n\r\nThere is really no significant difference in free throw percentages for Covid years, despite the absence of an audience. Therefore, to put it bluntly, audiences have little to no impact on the outcomes of free throws! Sorry to disappoint you, but your wasting your energy, save it for the 4th quarter. However, this raises the question of why don’t crowds impact free throw shooters? The answer to this lies in the ability of NBA players being accustomed to crowd noise, and being able to tune that noise out. So, yes fans, your noise isn’t distracting for free-throw shooters. Also, this renders gimmicks such as balloons, towel waving, kazoos, pretty much insignificant. So fans if I were you, I’d save my energy for the fourth quarter.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T18:18:22-05:00"
+      "last_modified": "2021-06-23T19:13:46-05:00"
     },
     {
       "path": "nbaSource.html",
       "title": "NBA Source Data",
-      "description": "This data was put together by Nathan Lauga, who himself NBA Stats and Information.\n",
+      "description": "This data was put together by Nathan Lauga, who himself used NBA Stats and Information.\n",
       "author": [
         {
           "name": "Varun Mittal",
@@ -41,7 +41,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\nThis project was made possible due to Nathan Lauga providing the invaluable data that he compiled from NBA Stats and Information.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T18:18:23-05:00"
+      "last_modified": "2021-06-23T19:04:56-05:00"
     },
     {
       "path": "nflExamination.html",
@@ -55,7 +55,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\n\r\n\r\n\r\nThe 2020 season was different across all sports, but how was it different for the NFL? The graph shows that while the amount of games the home team won was lower than most years, it wasn’t an outlier or significantly lower. After all this makes sense, as home-field advantage, at the end of the day, only holds so much of an impact over the game. The few exceptions might be in game-winning field goals or in false start scenarios, but these events don’t happen that frequently. After all the best team wins more often than not, so it’s safe to conclude that the reduction of home-field advantage didn’t alter significantly the amount the home team won. However, one of the greatest strengths of having fans is being able to bother the visiting defense. How were defenses impacted?\r\n\r\n\r\n\r\nThe graph depicts a large increase in the amount of points that the visiting team has scored over the course in a season, compared to the amount in each of the seasons since the last decade. This clearly indicates that yes, the lack of fans played a small part because fans do their best to make so much noise to disrupt the visiting offense that, in a year without fans, the visiting team was able to score more points comparitavely in 2020. However, a larger factor to take into account is the evolution of NFL offenses, that allows them to overcome defenses, not just the fans disrupting the offense. The advent of trick plays (such as Mitchell Trubisky completing a pass to Bradley Sowell or Wide Receivers throwing to QB’s) has made NFL offense’s more versatile than ever before, allowing for more scoring, and in the end, more fun for the fans!\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T18:18:25-05:00"
+      "last_modified": "2021-06-23T19:04:57-05:00"
     },
     {
       "path": "nflSource.html",
@@ -69,7 +69,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\nThis data was made accessible thanks to Spreadspoke who put together this data set from a variety of sources including: Pro Football Reference, ESPN, and NFL Stats and Information.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T18:18:26-05:00"
+      "last_modified": "2021-06-23T19:04:58-05:00"
     },
     {
       "path": "sources.html",
@@ -78,7 +78,7 @@
       "author": [],
       "date": "`r Sys.Date()`",
       "contents": "\r\nThis is where I will describe what sources I used and why I chose them. I may also discuss any broad challenges I faced while finding sources. Distill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T18:18:27-05:00"
+      "last_modified": "2021-06-23T19:04:59-05:00"
     }
   ],
   "collections": []
